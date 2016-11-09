@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'testhome/home'
+
   get 'sessions/new'
 
   devise_for :users, controllers: { sessions: 'users/sessions' }
