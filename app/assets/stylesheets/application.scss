@@ -16,3 +16,53 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/*universal*/
+
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/*footer*/
+
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $gray-light;
+  a {
+    color: #555;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+
+  ul {
+    //text-align:center;
+    width: 100%;
+    margin: 0 auto;
+    float: right;
+    list-style: none;
+    padding: 0;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}

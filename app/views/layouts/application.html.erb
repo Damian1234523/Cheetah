@@ -8,11 +8,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= render 'layouts/navbar' %>
+
   </head>
 
   <body>
     <%= yield %>
 
-  <!--<%= render 'layouts/footer' %>  funzt noch nicht richtig-->
+  <%= render 'layouts/footer' %>
   </body>
+
 </html>
