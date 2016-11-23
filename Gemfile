@@ -33,6 +33,11 @@ gem 'jbuilder', '~> 2.5'
 # gem devise used for userlogin/management
 gem 'devise'
 
+#raolroady used to create uml diagrams
+group :development, :test do
+  gem 'railroady'
+end
+
 #bootstrap
 gem 'bootstrap-sass'
 
