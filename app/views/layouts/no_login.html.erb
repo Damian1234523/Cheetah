@@ -1,2 +1,19 @@
-<h1>no_login_layout</h1>
+<html>
+<head>
+  <title>Cheetah</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <div class="page-header">
+    <%= image_tag("cheetah.jpeg", class: "img-responsive") %>
+  </div>
+
+</head>
+<body>
+
 <%= yield %>
+
+</body>
+
+</html>
