@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :universities
+
   get 'lecturers/index'
 
   get 'lecturers/create'
@@ -32,11 +34,14 @@ Rails.application.routes.draw do
 
   get 'universities/destroy'
 
+  get 'universities/new'
+
   root 'universities#index'
 
   get 'testhome/home'
 
   get 'sessions/new'
+
   devise_for :users, controllers: { sessions: 'users/sessions' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

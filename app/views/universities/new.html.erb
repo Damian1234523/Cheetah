@@ -1,0 +1,20 @@
+<%= form_for :university do |f| %>
+    <P>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </P>
+
+    <p>
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+    </p>
+
+    <p>
+      <%= f.label :typ %>
+      <%= f.text_field :typ%>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
