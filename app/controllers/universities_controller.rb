@@ -18,7 +18,9 @@ class UniversitiesController < ApplicationController
   end
 
   def destroy
-    @univeristy = University.find params[:id]
+    @university = University.find params[:id]
+    @university.destroy
+    redirect_to :action => :index
   end
 
   def new
