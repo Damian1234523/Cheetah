@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   get 'universities/index'
 
-  get 'universities/create'
+  post 'universities/new', to: 'universities#create'
 
   get 'universities/edit'
 
