@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   get 'universities/destroy'
 
-  root 'testhome#home'
+  root 'universities#index'
 
   get 'testhome/home'
 
