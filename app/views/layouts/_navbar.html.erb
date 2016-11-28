@@ -20,6 +20,7 @@
         <li><%= link_to('Library', '#')%></li>
         <li><%= link_to('Settings', '#')%></li>
         <li><%= link_to('About', '#')%></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
@@ -30,7 +31,7 @@
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
 
-        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-in") %> </li>
+        <li><%= link_to( 'Logout: '+current_user.username, destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-in") %> </li>
       </ul>
     </div>
   </div>
