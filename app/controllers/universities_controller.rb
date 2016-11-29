@@ -6,6 +6,8 @@ class UniversitiesController < ApplicationController
 
   def create
     @university = University.create(params.require(:university).permit(:name, :address, :typ))
+    @university.username = current_user.username
+    @university.user_id = current_user.id
     if @university.save
       redirect_to :action =>  :index
     else
