@@ -5,8 +5,8 @@ class UniversitiesController < ApplicationController
   end
 
   def create
-    @university = University.new(params.require(:university).permit(:name, :address, :typ))
-    if(@university.save)
+    @university = University.create(params.require(:university).permit(:name, :address, :typ))
+    if @university.save
       redirect_to :action =>  :index
     else
       render :action => :new
