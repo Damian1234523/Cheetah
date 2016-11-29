@@ -1,3 +1,22 @@
-<h1>Universities#index</h1>
+<h1>Universities</h1>
 
-<%= link_to("Create new University", universities_new_path) %>
+<%= link_to("Create new University", universities_new_path, {:class => "btn btn-default", style: "margin-down:10px"}) %>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Typ</th>
+    <th>Address</th>
+  </tr>
+
+  <% @university.each do |fac| %>
+    <tr>
+      <td><%= link_to(fac.name, '#') %></td>
+      <td><%= fac.typ %></td>
+      <td><%= fac.address %></td>
+    </tr>
+  <% end %>
+
+
+</table>
+
