@@ -28,4 +28,8 @@ class UniversitiesController < ApplicationController
   def new
    @university = University.new
   end
+
+  def show
+    @university = University.find(params[:id])
+  end
 end

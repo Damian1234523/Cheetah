@@ -11,7 +11,7 @@
 
   <% @university.each do |fac| %>
     <tr>
-      <td><%= link_to(fac.name, '#') %></td>
+      <td><%= link_to(fac.name, university_path(fac)) %></td>
       <td><%= fac.typ %></td>
       <td><%= fac.address %></td>
     </tr>
