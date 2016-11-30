@@ -1,20 +1,21 @@
-<%= form_for :university do |f| %>
-    <P>
-      <%= f.label :name %>
+<%= form_for :university, :html => {:class => "form-horizontal"} do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name, class: "col-md-4 control-label" %>
       <%= f.text_field :name %>
-    </P>
+    </div>
 
-    <p>
-      <%= f.label :address %>
+    <div class="form-group">
+      <%= f.label :address, class: "col-md-4 control-label" %>
       <%= f.text_field :address %>
-    </p>
+    </div>
 
-    <p>
-      <%= f.label :typ %>
+     <div class="form-group">
+      <%= f.label :typ, class: "col-md-4 control-label" %>
       <%= f.text_field :typ%>
-    </p>
+     </div>
 
     <p>
-      <%= f.submit %>
+      <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
     </p>
 <% end %>
