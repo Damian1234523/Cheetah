@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :universities
+  resources :universities do
+    resources :courses
+  end
 
   get 'lecturers/index'
 
