@@ -5,8 +5,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    #@university = University.find(params[:university_id])
-    #@course = Course.create(params.require(:course).permit(:name, :descrition, :univeristy_id => @university.id))
+
     @course = Course.create(params.require(:course).permit(:name, :descrition, :university_id))
     @course.username = current_user.username
     @course.user_id = current_user.id
