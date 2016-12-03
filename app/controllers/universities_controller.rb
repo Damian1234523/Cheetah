@@ -32,5 +32,7 @@ class UniversitiesController < ApplicationController
 
   def show
     @university = University.find(params[:id])
+    id = @university.id
+    @course = Course.where(:university_id => id)
   end
 end
