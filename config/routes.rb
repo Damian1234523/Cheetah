@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'courses/new'
 
+  post 'courses/new', to: 'courses#create'
+
   get 'universities/index'
 
   post 'universities/new', to: 'universities#create'

@@ -5,7 +5,8 @@ class UniversitiesController < ApplicationController
   end
 
   def create
-    @university = University.create(params.require(:university).permit(:name, :address, :typ))
+    @university = University.create(university_id: @university.id)
+    @university.name = "test"
     @university.username = current_user.username
     @university.user_id = current_user.id
     if @university.save
