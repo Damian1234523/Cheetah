@@ -1,4 +1,4 @@
 <h1> <%= @university.name %></h1>
 <h4> Typ: <%= @university.typ %> Address: <%= @university.address %></h4>
-<li> <%=link_to("create course", courses_new_path)%></li>
-
+<li> <%=link_to("create course_deprecated", courses_new_path(@university.id))%></li>
+<li> <%=link_to("create course", courses_new_path(university_id: @university))%></li>
