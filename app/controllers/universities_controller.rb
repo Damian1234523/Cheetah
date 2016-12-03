@@ -5,12 +5,11 @@ class UniversitiesController < ApplicationController
   end
 
   def create
-    @university = University.create(university_id: @university.id)
-    @university.name = "test"
+    @university = University.create(params.require(:university).permit(:name, :address, :typ))
     @university.username = current_user.username
     @university.user_id = current_user.id
     if @university.save
-      redirect_to :action =>  :index
+      redirect_to @university
     else
       render :action => :new
     end

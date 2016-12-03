@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'courses/create'
 
+  post 'courses/create'
+
   get 'courses/edit'
 
   get 'courses/destroy'
@@ -31,6 +33,8 @@ Rails.application.routes.draw do
   get 'courses/new'
 
   post 'courses/new', to: 'courses#create'
+
+  get 'courses/show'
 
   get 'universities/index'
 
