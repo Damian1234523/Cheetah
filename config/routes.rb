@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   get 'lecturers/new'
 
+  post 'lecturers/new', to: 'lecturers#create'
+
   get 'lecturers/show'
 
-  get 'lecturers/create'
+  post 'lecturers/create'
 
   get 'lecturers/edit'
 
