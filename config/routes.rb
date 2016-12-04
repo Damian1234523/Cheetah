@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
   resources :universities do
-    resources :courses
+    resources :courses do
+      resources :lecturers
+    end
   end
 
   get 'lecturers/index'
+
+  get 'lecturers/new'
+
+  get 'lecturers/show'
 
   get 'lecturers/create'
 
