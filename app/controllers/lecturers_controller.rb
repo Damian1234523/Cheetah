@@ -5,7 +5,7 @@ class LecturersController < ApplicationController
   end
 
   def create
-    @lecturer = Lecturer.create(params.require(:lecturer).permit(:name, :description, :course_id))
+    @lecturer = Lecturer.create(params.require(:lecturer).permit(:name, :lastname, :title, :course_id))
     @lecturer.username = current_user.username
     @lecturer.user_id = current_user.id
     if @lecturer.save
