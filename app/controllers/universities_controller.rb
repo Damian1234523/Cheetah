@@ -9,7 +9,7 @@ class UniversitiesController < ApplicationController
     @university.username = current_user.username
     @university.user_id = current_user.id
     if @university.save
-      redirect_to :action =>  :index
+      redirect_to @university
     else
       render :action => :new
     end
@@ -31,5 +31,7 @@ class UniversitiesController < ApplicationController
 
   def show
     @university = University.find(params[:id])
+    id = @university.id
+    @course = Course.where(:university_id => id)
   end
 end
