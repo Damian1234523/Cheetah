@@ -1,1 +1,18 @@
 <h1> <%= @course.name %> </h1>
+<li> <%=link_to("Create lecturer", lecturers_new_path(course_id: @course), {:class => "btn btn-default", style: "margin-down:10px"})%></li>
+
+<table class="table">
+    <tr>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Lastname</th>
+    </tr>
+
+  <% @lecturer.each do |lec| %>
+    <tr>
+      <td><%= lec.title %></td>
+      <td><%= link_to(lec.name, university_course_lecturer_path(course_id: lec)) %></td>
+      <td><%= lec.lastname %></td>
+    </tr>
+  <%end%>
+</table>

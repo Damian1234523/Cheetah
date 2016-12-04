@@ -1,0 +1,25 @@
+<h1>Create new lecturer</h1>
+
+<%= form_for :lecturer, :html => {:class => "form-horizontal"} do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name, class: "control-label col-xs-2" %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :lastname, class: "control-label col-xs-2" %>
+      <%= f.text_field :lastname %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :title, class: "control-label col-xs-2" %>
+      <%= f.text_field :title %>
+    </div>
+
+    <%= f.hidden_field :course_id, :value => params[:course_id] %>
+
+    <p>
+      <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
+    </p>
+<% end %>

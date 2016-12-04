@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
 
   resources :universities do
-    resources :courses
+    resources :courses do
+      resources :lecturers
+    end
   end
 
   get 'lecturers/index'
 
-  get 'lecturers/create'
+  get 'lecturers/new'
+
+  post 'lecturers/new', to: 'lecturers#create'
+
+  get 'lecturers/show'
+
+  post 'lecturers/create'
 
   get 'lecturers/edit'
 
@@ -27,6 +35,8 @@ Rails.application.routes.draw do
   post 'courses/create'
 
   get 'courses/edit'
+
+  get 'courses/show'
 
   get 'courses/destroy'
 
