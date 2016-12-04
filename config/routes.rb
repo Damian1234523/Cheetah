@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get 'courses/edit'
 
+  get 'courses/show'
+
   get 'courses/destroy'
 
   get 'courses/new'
