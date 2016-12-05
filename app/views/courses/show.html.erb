@@ -12,7 +12,7 @@
     <tr>
       <td><%= lec.title %></td>
       <td><%= link_to(lec.name, university_course_lecturer_path(params[:university_id], lec.course_id, lec)) %></td> <!--university_course_lecturer_path(course_id: lec)-->
-      <td><%= lec.lastname %></td>
+      <td><%= link_to(lec.lastname, university_course_lecturer_path(params[:university_id], lec.course_id, lec)) %></td>
     </tr>
   <%end%>
 </table>
