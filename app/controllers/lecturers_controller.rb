@@ -9,7 +9,7 @@ class LecturersController < ApplicationController
     @lecturer.username = current_user.username
     @lecturer.user_id = current_user.id
     if @lecturer.save
-      render :action => :show
+      redirect_to controller: 'lecturers', action: 'show', id: @lecturer.id
     else
       render :action => :new
     end

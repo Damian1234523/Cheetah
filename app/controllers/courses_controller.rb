@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
     @course.username = current_user.username
     @course.user_id = current_user.id
     if @course.save
-      redirect_to :action => :index
+      redirect_to controller: 'courses', action: 'show', id: @course.id
     else
       render :action => :new
     end
