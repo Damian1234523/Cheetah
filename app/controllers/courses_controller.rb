@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
+  include ApplicationHelper
   before_action :authenticate_user!
+
   def index
     @course = Course.all
   end
@@ -31,5 +33,8 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     id = @course.id
     @lecturer = Lecturer.where(:course_id => id)
+    init_bread
   end
+
+
 end

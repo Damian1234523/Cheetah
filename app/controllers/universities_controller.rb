@@ -1,7 +1,10 @@
 class UniversitiesController < ApplicationController
   before_action :authenticate_user!
+  include ApplicationHelper
+
   def index
     @university = University.all
+    init_bread
   end
 
   def create
@@ -33,5 +36,6 @@ class UniversitiesController < ApplicationController
     @university = University.find(params[:id])
     id = @university.id
     @course = Course.where(:university_id => id)
+    init_bread
   end
 end

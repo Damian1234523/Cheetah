@@ -1,4 +1,5 @@
 class LecturersController < ApplicationController
+  include ApplicationHelper
   before_action :authenticate_user!
   def index
     @lecturer = Lecturer.all
@@ -21,6 +22,7 @@ class LecturersController < ApplicationController
 
   def show
     @lecturer = Lecturer.find(params[:id])
+    init_bread
   end
 
   def edit
