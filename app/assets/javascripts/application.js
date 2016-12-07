@@ -17,7 +17,16 @@
 //= require_tree .
 
 //make table rows clickable
+//original
+/*
 $(document).ready(function($) {
+    $(".table-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+    */
+//edited for use in rails
+$(document).on('turbolinks:load', function() {
     $(".table-row").click(function() {
         window.document.location = $(this).data("href");
     });
