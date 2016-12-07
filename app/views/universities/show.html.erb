@@ -11,8 +11,8 @@
   </thead>
 
   <% @course.each do |cou| %>
-      <tr>
-        <td><%= link_to(cou.name, university_course_path(@university, cou)) %></td>
+      <tr class="table-row" data-href=<%= university_course_path(@university, cou) %>>
+        <td><%= cou.name %></td>
         <td><%= cou.description %></td>
       </tr>
   <%end%>

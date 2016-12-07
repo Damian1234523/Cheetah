@@ -10,10 +10,10 @@
     </tr>
   </thead>
   <% @lecturer.each do |lec| %>
-    <tr>
+    <tr class="table-row" data-href=<%= university_course_lecturer_path(params[:university_id], lec.course_id, lec) %>>
       <td><%= lec.title %></td>
-      <td><%= link_to(lec.name, university_course_lecturer_path(params[:university_id], lec.course_id, lec)) %></td> <!--university_course_lecturer_path(course_id: lec)-->
-      <td><%= link_to(lec.lastname, university_course_lecturer_path(params[:university_id], lec.course_id, lec)) %></td>
+      <td><%= lec.name %></td>
+      <td><%= lec.lastname %></td>
     </tr>
   <%end%>
 </table>

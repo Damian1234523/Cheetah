@@ -12,8 +12,8 @@
 </thead>
 
   <% @university.each do |fac| %>
-    <tr>
-      <td><%= link_to(fac.name, university_path(fac)) %></td>
+    <tr class="table-row" data-href=<%= university_path(fac) %>>
+      <td><%= fac.name %></td>
       <td><%= fac.typ %></td>
       <td><%= fac.address %></td>
     </tr>
