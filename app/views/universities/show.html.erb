@@ -1,6 +1,6 @@
 <%= render '/breadcru' %>
 
-<h1> <%= @university.name %></h1>
+<h1 style="margin-top: 0em"> <%= @university.name %></h1>
 <h4> Typ: <%= @university.typ %> Address: <%= @university.address %></h4>
 
 <li> <%=link_to("create course", courses_new_path(university_id: @university), {:class => "btn btn-default", style: "margin-down:10px"})%></li>

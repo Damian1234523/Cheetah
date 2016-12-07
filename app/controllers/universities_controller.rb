@@ -1,8 +1,10 @@
 class UniversitiesController < ApplicationController
   before_action :authenticate_user!
+  include ApplicationHelper
+
   def index
     @university = University.all
-    add_breadcrumb "Universities index", :universities_path
+    init_bread
   end
 
   def create
@@ -34,6 +36,6 @@ class UniversitiesController < ApplicationController
     @university = University.find(params[:id])
     id = @university.id
     @course = Course.where(:university_id => id)
-    add_breadcrumb @university.name
+    init_bread
   end
 end
