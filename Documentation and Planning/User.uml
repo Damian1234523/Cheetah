@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>RailsDependency</ID>
+  <OriginalElement>User</OriginalElement>
+  <nodes>
+    <node x="673.6504854368932" y="-1.106796116504853">User</node>
+    <node x="339.0" y="110.25">University</node>
+    <node x="23.0" y="137.171875">Course</node>
+    <node x="170.15672676837733" y="474.8171593273232">ApplicationRecord</node>
+    <node x="-269.13384188626907" y="164.0783417128988">Lecturer</node>
+    <node x="-538.9077669902912" y="184.60172503467408">Exam</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Course" target="Lecturer">
+      <point x="129.5" y="66.375" />
+      <point x="1.2565880721220992" y="283.2673153606102" />
+      <point x="-125.0" y="-38.25" />
+    </edge>
+    <edge source="Exam" target="ApplicationRecord">
+      <point x="115.0" y="32.25" />
+      <point x="-311.1456310679611" y="452.4404906380028" />
+      <point x="-112.77253814147019" y="463.0273491678226" />
+      <point x="-42.28294036061044" y="464.11334084604727" />
+      <point x="103.9625520110958" y="480.01133408460475" />
+      <point x="-80.5" y="12.0" />
+    </edge>
+    <edge source="Course" target="ApplicationRecord">
+      <point x="129.5" y="22.125" />
+      <point x="253.2066574202496" y="335.20236650485435" />
+      <point x="249.84882108183092" y="362.3521584604715" />
+      <point x="251.65742024965334" y="422.7436503120666" />
+      <point x="-80.5" y="-4.0" />
+    </edge>
+    <edge source="University" target="Course">
+      <point x="-139.5" y="-50.25" />
+      <point x="129.5" y="-66.375" />
+    </edge>
+    <edge source="Exam" target="Lecturer">
+      <point x="115.0" y="-32.25" />
+      <point x="-125.0" y="38.25" />
+    </edge>
+    <edge source="Lecturer" target="ApplicationRecord">
+      <point x="125.0" y="-0.0" />
+      <point x="-19.477115117891742" y="379.0748743065187" />
+      <point x="107.22052704576981" y="439.4315837378641" />
+      <point x="-80.5" y="4.0" />
+    </edge>
+    <edge source="University" target="User">
+      <point x="139.5" y="-50.25" />
+      <point x="-169.5" y="-0.0" />
+    </edge>
+    <edge source="Course" target="University">
+      <point x="129.5" y="-22.125" />
+      <point x="-139.5" y="50.25" />
+    </edge>
+    <edge source="University" target="ApplicationRecord">
+      <point x="139.5" y="50.25" />
+      <point x="251.65742024965334" y="414.7436503120666" />
+      <point x="-80.5" y="-12.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9035087719298246" x="249.0" y="253.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Association fields</Category>
+    <Category>Migration fields</Category>
+    <Category>Own fields</Category>
+  </Categories>
+</Diagram>
+
