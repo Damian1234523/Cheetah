@@ -22,6 +22,13 @@ class LecturersController < ApplicationController
 
   def show
     @lecturer = Lecturer.find(params[:id])
+    id = @lecturer.id
+    @exam = Exam.where(:lecturer_id => id)
+
+    #@le = Lecturer.find( @exam.lecturer_id)
+    @co = Course.find( @lecturer.course_id)
+    @un = University.find( @co.university_id)
+
     init_bread
   end
 

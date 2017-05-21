@@ -2,3 +2,20 @@
 
 <h1 style="margin-top: 0em"><%= @lecturer.title %> <%=@lecturer.name%> <%= @lecturer.lastname %></h1>
 <li> <%=link_to("Create exam", exams_new_path(lecturer_id: @lecturer), {:class => "btn btn-default", style: "margin-down:10px"})%></li>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <% @exam.each do |exa| %>
+      <tr class="table-row" data-href=<%= university_course_lecturer_exams_path(@un ,@co, @lecturer, exa) %>>
+        <td><%= exa.name %></td>
+        <td><%= exa.year %></td>
+        <td><%= exa.description %></td>
+      </tr>
+  <%end%>
+</table>
