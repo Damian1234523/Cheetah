@@ -1,3 +1,4 @@
 <%= render '/breadcru' %>
 
 <h1 style="margin-top: 0em"><%= @lecturer.title %> <%=@lecturer.name%> <%= @lecturer.lastname %></h1>
+<li> <%=link_to("Create exam", exams_new_path(lecturer_id: @lecturer), {:class => "btn btn-default", style: "margin-down:10px"})%></li>

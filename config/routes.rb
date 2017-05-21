@@ -42,6 +42,8 @@ Rails.application.routes.draw do
 
   get 'exams/new'
 
+  post 'exams/new', to: 'exams#create'
+
   get 'courses/index'
 
   get 'courses/create'
