@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'text/index'
+
+  get 'text/create'
+
+  get 'text/new'
+
+  get 'text/show'
+
+  get 'text/edit'
+
+  get 'text/destroy'
+
   resources :universities do
     resources :courses do
       resources :lecturers
