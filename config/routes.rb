@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
   resources :universities do
     resources :courses do
-      resources :lecturers
+      resources :lecturers do
+        resources :exams
+      end
     end
   end
 
@@ -43,6 +45,8 @@ Rails.application.routes.draw do
   get 'exams/new'
 
   post 'exams/new', to: 'exams#create'
+
+  get 'exams/show'
 
   get 'courses/index'
 
