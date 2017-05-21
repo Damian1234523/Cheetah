@@ -40,6 +40,8 @@ Rails.application.routes.draw do
 
   get 'exams/destroy'
 
+  get 'exams/new'
+
   get 'courses/index'
 
   get 'courses/create'
