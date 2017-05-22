@@ -2,10 +2,12 @@
 
 one:
   title: MyString
-  content: MyString
-  creator_id: 1
+  content: MyText
+  description: MyString
+  user_id: 1
 
 two:
   title: MyString
-  content: MyString
-  creator_id: 1
+  content: MyText
+  description: MyString
+  user_id: 1
