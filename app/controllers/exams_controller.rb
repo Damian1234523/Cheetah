@@ -25,6 +25,8 @@ class ExamsController < ApplicationController
   end
 
   def show
-    
+    @exam = Exam.find(params[:id])
+    id = @exam.id
+    @text = Text.where(:exam_id => id)
   end
 end
