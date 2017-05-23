@@ -52,6 +52,8 @@ Rails.application.routes.draw do
 
   get 'text/show'
 
+  post 'text/new', to: 'text#create'
+
   get 'courses/index'
 
   get 'courses/create'

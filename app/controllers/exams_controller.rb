@@ -28,5 +28,9 @@ class ExamsController < ApplicationController
     @exam = Exam.find(params[:id])
     id = @exam.id
     @text = Text.where(:exam_id => id)
+
+    @le = Lecturer.find(@exam.lecturer_id)
+    @co = Course.find(@le.course_id)
+    @un = University.find(@co.university_id)
   end
 end
