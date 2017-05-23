@@ -23,6 +23,7 @@ class TextController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
+
   end
 
   def edit
