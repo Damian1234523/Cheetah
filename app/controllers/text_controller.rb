@@ -1,7 +1,7 @@
 class TextController < ApplicationController
   include ApplicationHelper
   before_action :authenticate_user!
-  
+
   def index
     @text = Text.all
   end
