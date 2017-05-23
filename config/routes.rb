@@ -1,8 +1,24 @@
 Rails.application.routes.draw do
 
+  get 'text/index'
+
+  get 'text/create'
+
+  get 'text/new'
+
+  get 'text/show'
+
+  get 'text/edit'
+
+  get 'text/destroy'
+
   resources :universities do
     resources :courses do
-      resources :lecturers
+      resources :lecturers do
+        resources :exams do
+          resources :text
+        end
+      end
     end
   end
 
@@ -27,6 +43,16 @@ Rails.application.routes.draw do
   get 'exams/edit'
 
   get 'exams/destroy'
+
+  get 'exams/new'
+
+  post 'exams/new', to: 'exams#create'
+
+  get 'exams/show'
+
+  get 'text/show'
+
+  post 'text/new', to: 'text#create'
 
   get 'courses/index'
 
