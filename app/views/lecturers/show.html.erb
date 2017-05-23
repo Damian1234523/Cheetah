@@ -12,7 +12,7 @@
   </tr>
   </thead>
   <% @exam.each do |exa| %>
-      <tr class="table-row" data-href=<%= university_course_lecturer_exams_path(@un ,@co, @lecturer, exa) %>>
+      <tr class="table-row" data-href=<%= university_course_lecturer_exam_path(@un.id, @co.id, @lecturer.id, exa.id) %>>
         <td><%= exa.name %></td>
         <td><%= exa.year %></td>
         <td><%= exa.description %></td>
