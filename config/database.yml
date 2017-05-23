@@ -17,6 +17,14 @@ default: &default
   password: lsdcheetahsql
   socket: /var/run/mysqld/mysqld.sock
 
+travis: &travis
+    adapter: mysql2
+    encoding: utf8
+    pool: 5
+    username: travis
+    password:
+    socket: /var/run/mysqld/mysqld.sock
+
 development:
   <<: *default
   database: Cheetah_development
@@ -25,7 +33,7 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
+  <<: *travis
   database: Cheetah_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
