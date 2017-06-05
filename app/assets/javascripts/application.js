@@ -26,7 +26,7 @@ $(document).ready(function($) {
 });
     */
 //edited for use in rails
-$(document).on("turbolinks:load", function() {
+$(document).on('turbolinks:load', function() {
     $(".table-row").click(function() {
         window.document.location = $(this).data("href");
     });
