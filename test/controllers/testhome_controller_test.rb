@@ -1,3 +1,5 @@
+=begin
+
 require 'test_helper'
 
 class TesthomeControllerTest < ActionDispatch::IntegrationTest
@@ -7,3 +9,6 @@ class TesthomeControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+
+
+=end

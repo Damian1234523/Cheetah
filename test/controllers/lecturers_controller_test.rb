@@ -1,3 +1,5 @@
+=begin
+
 require 'test_helper'
 
 class LecturersControllerTest < ActionDispatch::IntegrationTest
@@ -22,3 +24,6 @@ class LecturersControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+
+
+=end
