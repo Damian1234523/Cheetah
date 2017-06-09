@@ -25,5 +25,4 @@ class LecturersControllerTest < ActionDispatch::IntegrationTest
 
 end
 
-
 =end
