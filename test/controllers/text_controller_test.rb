@@ -1,4 +1,7 @@
+=begin
+
 require 'test_helper'
+
 
 class TextControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
@@ -32,3 +35,6 @@ class TextControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+
+
+=end
