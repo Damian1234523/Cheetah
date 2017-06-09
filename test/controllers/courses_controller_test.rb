@@ -13,12 +13,12 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get edit" do
     get courses_edit_url
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should get destroy" do
     get courses_destroy_url
-    assert_response :success
+    assert_response :redirect
   end
 
 end

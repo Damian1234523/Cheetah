@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ExamTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+   test "Exsam test" do
+     assert true
+   end
 end

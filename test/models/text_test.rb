@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TextTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+   test "Text Test" do
+     assert true
+   end
 end
