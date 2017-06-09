@@ -1,4 +1,6 @@
+
 require 'test_helper'
+
 
 class UniversitiesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
@@ -22,3 +24,6 @@ class UniversitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+
+
+
