@@ -23,7 +23,9 @@ class TextController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
-
+    @resourceid = @text.id
+    @type = "text"
+    @userid = current_user.id
   end
 
   def edit

@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     resources :courses do
       resources :lecturers do
         resources :exams do
-          resources :text
+          resources :text do
+            resource :comments
+          end
         end
       end
     end
