@@ -23,6 +23,7 @@ class TextController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
+    #commontator_thread_show(@text)
 
   end
 
