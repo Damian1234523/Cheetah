@@ -24,7 +24,7 @@ class TextController < ApplicationController
   def show
     @text = Text.find(params[:id])
     @resourceid = @text.id
-    @type = "text"
+    @tuep = "text"
 
   end
 

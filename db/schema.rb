@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170611164250) do
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "userid"
     t.text     "content",    limit: 65535
-    t.string   "type"
+    t.string   "tuep"
     t.integer  "resourceid"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
