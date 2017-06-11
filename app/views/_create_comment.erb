@@ -1,6 +1,6 @@
 <h1>Create new comment</h1>
 <%#= form_for :comment, :html => {:controller => "comment", :action => "create" }, :html => {:method => :post} do |f| %>
-<%= form_for :comment, :url => comments_create_path, :html => {:method => :post} do |f| %>
+<%= form_for :comment, :url => comments_create_path(:comment), :html => {:method => :post} do |f| %>
 
 
     <div class="form-group">
