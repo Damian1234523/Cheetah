@@ -44,6 +44,13 @@ gem 'bootstrap-sass'
 #breadcrumbs menu plugin
 gem "breadcrumbs_on_rails"
 
+#comments==================
+gem "the_comments", "~> 2.2.1"
+
+gem 'haml'                # or gem 'slim'
+gem 'awesome_nested_set'  # or same gem
+#============================
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
