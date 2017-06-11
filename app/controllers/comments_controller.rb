@@ -1,5 +1,8 @@
 class CommentsController < ApplicationController
   def create
-    @test = 5
+    if params[:comment][:type] == "text"
+      @post = Text.find(params[:comment][:resourceid])
+      @test = 5
+    end
   end
 end
