@@ -41,4 +41,14 @@ class CommentsController < ApplicationController
   # %w[ draft published deleted spam ]
   # %w[ my_comments my_draft my_published ]
   # %w[ total_draft total_published total_deleted total_spam ]
+
+  def comment_params
+    params
+        .require(:comment)
+        .permit(:title, :contacts, :raw_content, :parent_id, :commentable_type, :commentable_id)
+        .merge(denormalized_fields)
+        .merge(request_data_for_comment)
+        .merge(tolerance_time: params[:tolerance_time].to_i)
+        .merge(user: current_user, view_token: comments_view_token)
+  end
 end

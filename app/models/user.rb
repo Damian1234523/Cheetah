@@ -21,4 +21,22 @@ class User < ApplicationRecord
 
   # Only allow letter, number, underscore and punctuation.
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+
+  include TheComments::User
+
+  has_many :posts
+
+  # IT'S JUST AN EXAMPLE OF ANY ROLE SYSTEM
+  def admin?
+    self == User.first
+  end
+
+  # YOU HAVE TO IMPLEMENT YOUR ROLE POLICY FOR COMMENTS HERE
+  def comments_admin?
+    admin?
+  end
+
+  def comments_moderator? comment
+    id == comment.holder_id
+  end
 end

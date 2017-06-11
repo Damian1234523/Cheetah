@@ -23,7 +23,7 @@ class TextController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
-
+    @comments = @text.comments.with_state([:draft, :published])
   end
 
   def edit
