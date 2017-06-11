@@ -44,6 +44,9 @@ gem 'bootstrap-sass'
 #breadcrumbs menu plugin
 gem "breadcrumbs_on_rails"
 
+#comment system
+gem 'commontator', '~> 4.11.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

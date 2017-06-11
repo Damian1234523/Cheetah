@@ -17,6 +17,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+//für commentare
+//*= require commontator/application //alte css version
+// an scss angepasst
+@import "commontator/application";
+
 /*universal*/
 
 

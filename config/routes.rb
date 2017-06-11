@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount Commontator::Engine => '/commontator'
+
   get 'text/index'
 
   get 'text/create'
