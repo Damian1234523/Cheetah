@@ -26,6 +26,8 @@ class TextController < ApplicationController
     @resourceid = @text.id
     @tuep = "text"
 
+    @comments = Comment.where(tuep: 'text', resourceid: @text.id)
+
   end
 
   def edit
