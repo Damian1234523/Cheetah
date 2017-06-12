@@ -9,9 +9,13 @@ class CommentsController < ApplicationController
     @comment = Comment.create(params.require(:comment).permit(:content, :resourceid, :tuep))
     @comment.userid = current_user.id
     if @comment.save
-      test = 0
+      ex = Exam.find(@post.exam_id)
+      le = Lecturer.find(ex.lecturer_id)
+      co = Course.find(le.course_id)
+      un = University.find(co.university_id)
+      redirect_to university_course_lecturer_exam_text_path(un, co, le, ex, @post)
     else
-      test = 1
+
     end
 
   end
