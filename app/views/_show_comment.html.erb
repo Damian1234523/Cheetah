@@ -4,10 +4,10 @@
     <p>
       <b>Commenter:</b>
       <%= User.find(comment.userid).username %>
+      <b> Created at: </b><%=comment.created_at%>
     </p>
 
     <p>
-      <b>Comment:</b>
-      <%= comment.content %>
+    <div class="well"><%= comment.content %></div>
     </p>
 <% end %>
