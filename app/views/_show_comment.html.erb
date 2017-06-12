@@ -1,0 +1,13 @@
+<h2>Comments</h2>
+
+<% @comments.each do |comment| %>
+    <p>
+      <b>Commenter:</b>
+      <%= User.find(comment.userid).username %>
+      <b> Created at: </b><%=comment.created_at%>
+    </p>
+
+    <p>
+    <div class="well"><%= comment.content %></div>
+    </p>
+<% end %>
