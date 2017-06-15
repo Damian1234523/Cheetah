@@ -1,4 +1,4 @@
-Tools to try for converting Blog to pdf, not sure which one work
+Tools to try for converting Blog to pdf, not sure which one work the best.
 
 
 https://www.blogbooker.com
