@@ -15,7 +15,8 @@ class CommentsController < ApplicationController
       un = University.find(co.university_id)
       redirect_to university_course_lecturer_exam_text_path(un, co, le, ex, @post)
     else
-      #TODO:Fehlebehandlung
+
     end
+
   end
 end

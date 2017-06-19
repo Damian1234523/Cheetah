@@ -23,6 +23,10 @@ class TextController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
+    @resourceid = @text.id
+    @tuep = "text"
+
+    @comments = Comment.where(tuep: 'text', resourceid: @text.id)
 
   end
 

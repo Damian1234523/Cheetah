@@ -1,9 +1,12 @@
-Tools to try
+Tools to try for converting Blog to pdf, not sure which one work the best.
 
-https://www.blogbooker.com/
 
-http://kitpdf.com/
+https://www.blogbooker.com
 
-https://www.web2pdfconvert.com/
+http://kitpdf.com
+
+https://www.web2pdfconvert.com
 
 http://document.online-convert.com/convert-to-pdf
+
+https://help.edublogs.org/blog-to-book
